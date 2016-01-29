@@ -1,12 +1,14 @@
 Dev hacks
 =========
 
-#### Remove `<CR>` characters from file (Mac OS X tested)
+#### *nix zone
+
+##### Remove `<CR>` characters from file (Mac OS X tested)
 
 `sed -i.bak $'s/\r//' file`
 
 
-#### Find large files
+##### Find large files
 
 ```
 sudo find / -size +500000 -print
@@ -16,7 +18,7 @@ sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
 
-#### Hardware temps/fan speed for Mac OS X
+##### Hardware temps/fan speed for Mac OS X
 
 https://github.com/Chris911/iStats
 
@@ -25,8 +27,9 @@ gem install iStats
 istats
 ```
 
+#### Python
 
-#### Ubuntu pyenv setup
+##### Ubuntu pyenv setup
 
 ```
 sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
@@ -43,7 +46,7 @@ echo 'pyenv virtualenvwrapper' >> ~/.bashrc
 exec $SHELL
 ```
 
-#### ruby/rails gem/bundler
+#### Ruby/Rails gem/bundler
 
 ##### Resolve openssl build issue on Mac OS X 10.11.*
 
