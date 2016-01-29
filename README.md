@@ -10,10 +10,10 @@ Dev hacks
 
 ##### Find large files
 
-```
+```shell
 sudo find / -size +500000 -print
 ```
-```
+```shell
 sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
@@ -22,16 +22,20 @@ sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 
 https://github.com/Chris911/iStats
 
-```
+```shell
 gem install iStats
 istats
 ```
+
+
+------------------------------
+
 
 #### Python
 
 ##### Ubuntu pyenv setup
 
-```
+```shell
 sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
 sudo pip install virtualenvwrapper
 
@@ -45,6 +49,10 @@ echo 'pyenv virtualenvwrapper' >> ~/.bashrc
 
 exec $SHELL
 ```
+
+
+------------------------------
+
 
 #### Ruby/Rails gem/bundler
 
