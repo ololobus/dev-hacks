@@ -60,3 +60,10 @@ exec $SHELL
 
 `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`
 
+
+------------------------------
+
+
+#### DBA
+
+##### PostgreSQL
