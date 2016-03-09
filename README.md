@@ -50,6 +50,9 @@ echo 'pyenv virtualenvwrapper' >> ~/.bashrc
 exec $SHELL
 ```
 
+##### Kill Python Multiprocessing Pool
+SIGQUIT (`Ctrl + \`) will kill all processes even under Python 2.x.
+
 
 ------------------------------
 
