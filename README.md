@@ -27,6 +27,15 @@ gem install iStats
 istats
 ```
 
+------------------------------
+
+
+#### Git
+
+##### Rebase
+
+`git rerere` -- https://git-scm.com/docs/git-rerere
+
 
 ------------------------------
 
