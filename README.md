@@ -89,4 +89,17 @@ SIGQUIT (`Ctrl + \`) will kill all processes even under Python 2.x.
 
 ## DBA
 
-#### PostgreSQL
+### PostgreSQL
+
+#### Indexes and tables size
+
+```sql
+SELECT relname, relpages
+FROM pg_class
+ORDER BY relpages DESC;
+```
+
+```sql
+SELECT relname, (relpages * 8) / 1024 AS size_mb
+FROM pg_class ORDER BY relpages DESC LIMIT 10;
+```
