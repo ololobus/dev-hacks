@@ -1,14 +1,25 @@
 Dev hacks
 =========
 
-#### *nix zone
+## *nix zone
 
-##### Remove `<CR>` characters from file (Mac OS X tested)
+#### Generate random passwords from command line
 
-`sed -i.bak $'s/\r//' file`
+```shell
+openssl rand -base64 10
+```
 
+```shell
+openssl rand -hex 10
+```
 
-##### Find large files
+#### Remove `<CR>` characters from file (Mac OS X tested)
+
+```shell
+sed -i.bak $'s/\r//' file`
+```
+
+#### Find large files
 
 ```shell
 sudo find / -size +500000 -print
@@ -18,7 +29,7 @@ sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
 
-##### Hardware temps/fan speed for Mac OS X
+#### Hardware temps/fan speed for Mac OS X
 
 https://github.com/Chris911/iStats
 
@@ -30,9 +41,9 @@ istats
 ------------------------------
 
 
-#### Git
+## Git
 
-##### Rebase
+#### Rebase
 
 `git rerere` -- https://git-scm.com/docs/git-rerere
 
@@ -40,9 +51,9 @@ istats
 ------------------------------
 
 
-#### Python
+## Python
 
-##### Ubuntu pyenv setup
+#### Ubuntu pyenv setup
 
 ```shell
 sudo apt-get install git python-pip make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
@@ -59,16 +70,16 @@ echo 'pyenv virtualenvwrapper' >> ~/.bashrc
 exec $SHELL
 ```
 
-##### Kill Python Multiprocessing Pool
+#### Kill Python Multiprocessing Pool
 SIGQUIT (`Ctrl + \`) will kill all processes even under Python 2.x.
 
 
 ------------------------------
 
 
-#### Ruby/Rails gem/bundler
+## Ruby/Rails gem/bundler
 
-##### Resolve openssl build issue on Mac OS X 10.11.*
+#### Resolve openssl build issue on Mac OS X 10.11.*
 
 `bundle config build.eventmachine --with-cppflags=-I/usr/local/opt/openssl/include`
 
@@ -76,6 +87,6 @@ SIGQUIT (`Ctrl + \`) will kill all processes even under Python 2.x.
 ------------------------------
 
 
-#### DBA
+## DBA
 
-##### PostgreSQL
+#### PostgreSQL
