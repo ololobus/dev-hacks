@@ -96,6 +96,23 @@ SIGQUIT (`Ctrl + \`) will kill all processes even under Python 2.x.
 
 ### PostgreSQL
 
+#### Count, preview and delete duplicates
+```sql
+SELECT count(id)
+FROM (SELECT id, ROW_NUMBER() OVER (partition BY text1, text2 ORDER BY id) AS rnum FROM tus) t
+WHERE t.rnum > 1;
+
+SELECT id, text1
+FROM (SELECT id, text1, ROW_NUMBER() OVER (partition BY text1, text2 ORDER BY id) AS rnum FROM tus) t
+WHERE t.rnum > 1 limit 100;
+
+DELETE FROM tus
+WHERE id IN (
+    SELECT id
+    FROM (SELECT id, ROW_NUMBER() OVER (partition BY text1, text2 ORDER BY id) AS rnum FROM tus) t
+    WHERE t.rnum > 1);
+```
+
 #### Indexes and tables size
 
 ```sql
