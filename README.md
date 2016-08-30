@@ -125,3 +125,9 @@ ORDER BY relpages DESC;
 SELECT relname, (relpages * 8) / 1024 AS size_mb
 FROM pg_class ORDER BY relpages DESC LIMIT 10;
 ```
+
+#### Activity
+
+```sql
+select * from pg_stat_activity;
+```
