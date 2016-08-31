@@ -37,3 +37,19 @@ FROM pg_class ORDER BY relpages DESC LIMIT 10;
 ```sql
 select * from pg_stat_activity;
 ```
+
+### Investigate locks
+
+```sql
+-- View with readable locks info and filtered out locks on system tables
+
+CREATE VIEW active_locks AS
+SELECT clock_timestamp(), pg_class.relname, pg_locks.locktype, pg_locks.database,
+       pg_locks.relation, pg_locks.page, pg_locks.tuple, pg_locks.virtualtransaction,
+       pg_locks.pid, pg_locks.mode, pg_locks.granted
+FROM pg_locks JOIN pg_class ON pg_locks.relation = pg_class.oid
+WHERE relname !~ '^pg_' and relname <> 'active_locks';
+
+-- Now when we want to see locks just type
+SELECT * FROM active_locks;
+```
