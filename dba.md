@@ -53,3 +53,7 @@ WHERE relname !~ '^pg_' and relname <> 'active_locks';
 -- Now when we want to see locks just type
 SELECT * FROM active_locks;
 ```
+
+More: http://blog.nordeus.com/dev-ops/postgresql-locking-revealed.htm
+
+
