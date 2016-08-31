@@ -28,6 +28,14 @@ sudo find / -size +500000 -print
 sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
+#### `tmux` usage
+
+list – `tmux ls`
+
+resume – `tmux a`
+
+detach – `Ctrl + b`, press `d`
+
 
 #### Hardware temps/fan speed for Mac OS X
 
