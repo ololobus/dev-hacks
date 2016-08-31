@@ -32,3 +32,12 @@ list – `tmux ls`
 resume – `tmux a`
 
 detach – `Ctrl + b`, press `d`
+
+### Hardware temps/fan speed for Mac OS X
+
+https://github.com/Chris911/iStats
+
+```shell
+gem install iStats
+istats
+```
