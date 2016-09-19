@@ -25,6 +25,12 @@ sudo find / -size +500000 -print
 sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
+### Find large directories
+```shell
+sudo du -k /* | awk '$1 > 500000' | sort -nr
+```
+
+
 ### `tmux` usage
 
 list – `tmux ls`
