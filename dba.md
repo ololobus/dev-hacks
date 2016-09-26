@@ -57,3 +57,10 @@ SELECT * FROM active_locks;
 More: http://blog.nordeus.com/dev-ops/postgresql-locking-revealed.htm
 
 
+### VACUUM
+
+Full vacuum
+```sql
+vacuum (full, verbose, analyze);
+```
+
