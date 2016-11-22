@@ -1,5 +1,15 @@
 # Python
 
+### Manage python packages in a ruby bundler manner
+```shell
+$ cat requirements.txt
+  requests>=2.12.1,<3.0.0
+$ pip install -r requirements.txt
+$ pip freeze > requirements.locked.txt
+$ cat requirements.locked.txt
+  requests==2.12.1
+```
+
 ### Ubuntu pyenv setup
 
 ```shell
