@@ -7,3 +7,4 @@ Dev hacks
   3. [Python](python.md)
   4. [Ruby/Rails, gem/bundler](ruby.md)
   5. [DBA](dba.md)
+  6. [macOS](macos.md)
