@@ -1,10 +1,19 @@
-## macOS
+# macOS
 
-#### Disable discrete GPU dependency for selected app
+### Disable discrete GPU dependency for selected app
 
 Open `info.plist` inside `.app` package and add
 
 ```xml
 <key>NSSupportsAutomaticGraphicsSwitching</key>
 <string>YES</string>
+```
+
+### Hardware temps/fan speed for Mac OS X
+
+https://github.com/Chris911/iStats
+
+```shell
+gem install iStats
+istats
 ```
