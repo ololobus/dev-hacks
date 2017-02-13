@@ -11,7 +11,8 @@ Install Java Development Kit
 Download and install it from [oracle.com](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 Add following code to your e.g. `.bash_profile`
-```
+
+```bash
 # For Apache Spark
 if which java > /dev/null; then export JAVA_HOME=$(/usr/libexec/java_home); fi
 ```
@@ -19,7 +20,8 @@ if which java > /dev/null; then export JAVA_HOME=$(/usr/libexec/java_home); fi
 Install Apache Spark
 --------------------
 You can use Mac OS package manager Brew ([http://brew.sh/](http://brew.sh/))
-```
+
+```shell
 brew update
 brew install scala
 brew install apache-spark
@@ -28,7 +30,8 @@ brew install apache-spark
 Set up env variables
 --------------------
 Add following code to your e.g. `.bash_profile`
-```
+
+```bash
 # For a ipython notebook and pyspark integration
 if which pyspark > /dev/null; then
   export SPARK_HOME="/usr/local/Cellar/apache-spark/2.1.0/libexec/"
@@ -38,7 +41,8 @@ fi
 ```
 
 You can check `SPARK_HOME` path using following brew command
-```
+
+```shell
 $ brew info apache-spark
 apache-spark: stable 2.1.0, HEAD
 Engine for large-scale data processing
@@ -53,7 +57,8 @@ Ipython profile
 ----------------------
 
 Since [profiles are not supported](http://jupyter.readthedocs.io/en/latest/migrating.html#since-jupyter-does-not-have-profiles-how-do-i-customize-it) in `jupyter` and now you can see following deprecation warning
-```
+
+```shell
 $ ipython notebook --profile=pyspark
 [TerminalIPythonApp] WARNING | Subcommand `ipython notebook` is deprecated and will be removed in future versions.
 [TerminalIPythonApp] WARNING | You likely want to use `jupyter notebook` in the future
@@ -63,19 +68,20 @@ It seems that it is not possible to run various custom startup files as it was w
 
 Run ipython
 -----------
-```
+
+```shell
 $ jupyter-notebook
 ```
 
 Initialize `pyspark`
-```
+```ipython
 In [1]: import os
         execfile(os.path.join(os.environ["SPARK_HOME"], 'python/pyspark/shell.py'))
 Out[1]: <pyspark.context.SparkContext at 0x10a982b10>
 ```
 
 `sc` variable should be available
-```
+```ipython
 In [2]: sc
 Out[2]: <pyspark.context.SparkContext at 0x10a982b10>
 ```
@@ -84,12 +90,16 @@ Alternatively
 -------------
 
 You can also force `pyspark` shell command to run ipython web notebook instead of command line interactive interpreter. To do so you have to add following env variables:
-```
+
+```bash
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS=notebook
 ```
+
 and then simply run
-```
+
+```shell
 $ pyspark
 ```
+
 which will open a web notebook with `sc` available automatically.
