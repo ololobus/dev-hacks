@@ -17,3 +17,7 @@ https://github.com/Chris911/iStats
 gem install iStats
 istats
 ```
+
+### Using Spark with ipython/jupyter
+
+See [guide](macos-spark-ipython.md).
