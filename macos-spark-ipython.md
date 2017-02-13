@@ -64,6 +64,7 @@ $ ipython notebook --profile=pyspark
 [TerminalIPythonApp] WARNING | You likely want to use `jupyter notebook` in the future
 [W 01:45:07.821 NotebookApp] Unrecognized alias: '--profile=pyspark', it will probably have no effect.
 ```
+
 It seems that it is not possible to run various custom startup files as it was with `ipython` profiles. Thus, the easiest way will be to run `pyspark` init script at the beginning of your notebook manually or follow [alternative way](#alternatively).
 
 Run ipython
@@ -74,6 +75,7 @@ $ jupyter-notebook
 ```
 
 Initialize `pyspark`
+
 ```ipython
 In [1]: import os
         execfile(os.path.join(os.environ["SPARK_HOME"], 'python/pyspark/shell.py'))
@@ -81,6 +83,7 @@ Out[1]: <pyspark.context.SparkContext at 0x10a982b10>
 ```
 
 `sc` variable should be available
+
 ```ipython
 In [2]: sc
 Out[2]: <pyspark.context.SparkContext at 0x10a982b10>
