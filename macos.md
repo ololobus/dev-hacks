@@ -18,6 +18,6 @@ gem install iStats
 istats
 ```
 
-### Using Spark with ipython/jupyter
+### Using Apache Spark with ipython/jupyter
 
 See [guide](https://gist.github.com/ololobus/4c221a0891775eaa86b0).
