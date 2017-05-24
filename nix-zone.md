@@ -16,11 +16,6 @@ openssl rand -hex 10
 sed -i.bak $'s/\r//' file`
 ```
 
-### Find large directories
-```shell
-sudo du -k /* | awk '$1 > 500000' | sort -nr
-```
-
 
 ### `tmux` usage
 
@@ -51,3 +46,9 @@ sudo find / -size +500000 -print
 ```shell
 sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
+
+### Find large directories
+```shell
+sudo du -k /* | awk '$1 > 500000' | sort -nr
+```
+
