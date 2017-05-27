@@ -52,3 +52,8 @@ sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 sudo du -k /* | awk '$1 > 500000' | sort -nr
 ```
 
+### System stress/load tests
+```shell
+sudo apt-get install sysbench
+sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
+```
