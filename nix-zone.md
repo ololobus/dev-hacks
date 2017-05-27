@@ -57,3 +57,8 @@ sudo du -k /* | awk '$1 > 500000' | sort -nr
 sudo apt-get install sysbench
 sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
 ```
+
+### Run command and update its output every N_SECONDS
+```shell
+watch -n N_SECONDS <your command>
+```
