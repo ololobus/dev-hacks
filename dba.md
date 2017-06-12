@@ -35,7 +35,7 @@ FROM pg_class ORDER BY relpages DESC LIMIT 10;
 ### Activity
 
 ```sql
-select * from pg_stat_activity;
+SELECT * FROM pg_stat_activity;
 ```
 
 ### Investigate locks
@@ -61,6 +61,10 @@ More: http://blog.nordeus.com/dev-ops/postgresql-locking-revealed.htm
 
 Full vacuum
 ```sql
-vacuum (full, verbose, analyze);
+VACUUM (full, verbose, analyze);
 ```
 
+### Backend pid
+```sql
+SELECT pg_backend_pid();
+```
