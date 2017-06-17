@@ -5,8 +5,8 @@
 $ cat requirements.txt
   requests>=2.12.1,<3.0.0
 $ pip install -r requirements.txt
-$ pip freeze > requirements.locked.txt
-$ cat requirements.locked.txt
+$ pip freeze > requirements.lock.txt
+$ cat requirements.lock.txt
   requests==2.12.1
 ```
 
