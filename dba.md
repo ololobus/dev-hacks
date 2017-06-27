@@ -68,3 +68,14 @@ VACUUM (full, verbose, analyze);
 ```sql
 SELECT pg_backend_pid();
 ```
+
+### Create large random dataset
+```sql
+CREATE TABLE large_test (num1 bigint, num2 double precision, num3 double precision);
+
+INSERT INTO large_test (num1, num2, num3)
+  SELECT round(random()*10), random(), random()*142
+  FROM generate_series(1, 20000000) s(i);
+
+COPY large_test TO '/Users/username/Downloads/large_test.csv';
+```
