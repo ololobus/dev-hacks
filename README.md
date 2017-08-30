@@ -8,3 +8,4 @@ Dev hacks
   4. [Ruby/Rails, gem/bundler](ruby.md)
   5. [DBA](dba.md)
   6. [macOS](macos.md)
+  7. [C development](c-dev.md)
