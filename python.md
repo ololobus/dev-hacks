@@ -1,5 +1,16 @@
 # Python
 
+### Virtual envs
+Setup
+```shell
+python -m venv ./venv_name
+```
+
+Activate
+```shell
+source venv_name/bin/activate
+```
+
 ### Manage python packages in a ruby bundler manner
 ```shell
 $ cat requirements.txt
