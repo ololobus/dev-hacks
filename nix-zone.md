@@ -62,3 +62,8 @@ sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
 ```shell
 watch -n N_SECONDS <your command>
 ```
+
+### Manually generate a locale
+```shell
+localedef -i en_US -f UTF-8 en_US.UTF-8
+```
