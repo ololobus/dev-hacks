@@ -17,6 +17,7 @@ java -cp /path/to/java/classes/* JavaClass
 
 ```bash
 jar cf java_class-v1.0.jar JavaClass.class
+jar cf java_class-v1.0.jar *.class
 ```
 
 ### Viewing the contents of a jar file
