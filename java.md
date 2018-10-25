@@ -23,7 +23,7 @@ jar cf java_class-v1.0.jar *.class
 ### Viewing the contents of a jar file
 
 ```bash
-jar tf java_class-v1.0.jar
+jar tvf java_class-v1.0.jar
 ```
 
 ### CLASSPATH example
