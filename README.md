@@ -9,3 +9,4 @@ Dev hacks
   5. [DBA](dba.md)
   6. [macOS](macos.md)
   7. [C development](c-dev.md)
+  8. [Java](java.md)
