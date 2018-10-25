@@ -25,7 +25,7 @@ jar cf java_class-v1.0.jar JavaClass.class
 jar tf java_class-v1.0.jar
 ```
 
-### CLASSPAT example
+### CLASSPATH example
 
 ```bash
 export CLASSPATH=.:$HIVE_HOME/lib/*:$HIVE_HOME/jdbc/*:$HADOOP_HOME/lib/*:$HOME/local/*
