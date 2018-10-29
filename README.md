@@ -10,3 +10,4 @@ Dev hacks
   6. [macOS](macos.md)
   7. [C development](c-dev.md)
   8. [Java](java.md)
+  9. [Windows](windows.md)
