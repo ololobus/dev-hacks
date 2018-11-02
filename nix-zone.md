@@ -67,3 +67,9 @@ watch -n N_SECONDS <your command>
 ```shell
 localedef -i en_US -f UTF-8 en_US.UTF-8
 ```
+
+### Wireshark
+Filter packets by data size and value 
+```python
+data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2})
+```
