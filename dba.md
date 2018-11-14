@@ -70,7 +70,7 @@ SELECT pg_backend_pid();
 ```
 
 ### Create large random dataset
-Size approx. for 20000000: (8 + 8 + 8) * 20000000 bytes = 480 MB
+Size approx. for `20000000`: `(8 + 8 + 8) * 20000000 bytes = 480 MB`
 
 ```sql
 CREATE TABLE large_test (num1 bigint, num2 double precision, num3 double precision);
