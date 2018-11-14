@@ -61,7 +61,7 @@ More: http://blog.nordeus.com/dev-ops/postgresql-locking-revealed.htm
 
 Full vacuum
 ```sql
-VACUUM (full, verbose, analyze);
+VACUUM (FULL, VERBOSE, ANALYZE);
 ```
 
 ### Backend pid
@@ -70,12 +70,17 @@ SELECT pg_backend_pid();
 ```
 
 ### Create large random dataset
+Size approx. for 20000000: (8 + 8 + 8) * 20000000 bytes = 480 MB
+
 ```sql
 CREATE TABLE large_test (num1 bigint, num2 double precision, num3 double precision);
 
 INSERT INTO large_test (num1, num2, num3)
   SELECT round(random()*10), random(), random()*142
   FROM generate_series(1, 20000000) s(i);
+```
 
+Export is necessary
+```sql
 COPY large_test TO '/Users/username/Downloads/large_test.csv';
 ```
