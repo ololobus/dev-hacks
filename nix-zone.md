@@ -73,3 +73,14 @@ Filter packets by data size and value
 ```python
 data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2})
 ```
+### OpenVPN
+
+```shell
+sudo openvpn --config '/path/to/openvpn/config.ovpn'
+```
+To use with login/pass create `pass.txt` with:
+```text
+login
+password
+```
+and add `auth-user-pass /path/to/pass.txt` to `config.ovpn`.
