@@ -40,7 +40,7 @@ SELECT nspname || '.' || relname AS "relation",
   LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
   WHERE nspname NOT IN ('pg_catalog', 'information_schema')
   ORDER BY pg_relation_size(C.oid) DESC
-  LIMIT 20;
+  LIMIT 10;
  ```
  More: https://wiki.postgresql.org/wiki/Disk_Usage
 
@@ -83,6 +83,7 @@ SELECT pg_backend_pid();
 
 ### Create large random dataset
 Size approx. for `20000000`: `(8 + 8 + 8) * 20000000 bytes = 480 MB`
+Actualy on disk: ``
 
 ```sql
 CREATE TABLE large_test (num1 bigint, num2 double precision, num3 double precision);
@@ -92,7 +93,7 @@ INSERT INTO large_test (num1, num2, num3)
   FROM generate_series(1, 20000000) s(i);
 ```
 
-Export is necessary
+Export if necessary
 ```sql
 COPY large_test TO '/Users/username/Downloads/large_test.csv';
 ```
