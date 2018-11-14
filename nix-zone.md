@@ -78,7 +78,7 @@ data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2}
 ```shell
 sudo openvpn --config '/path/to/openvpn/config.ovpn'
 ```
-To use with login/pass create `pass.txt` with:
+To use with login/password create `pass.txt` with:
 ```text
 login
 password
