@@ -32,6 +32,18 @@ SELECT relname, (relpages * 8) / 1024 AS size_mb
 FROM pg_class ORDER BY relpages DESC LIMIT 10;
 ```
 
+#### Finding the size of your biggest relations 
+```sql
+SELECT nspname || '.' || relname AS "relation",
+    pg_size_pretty(pg_relation_size(C.oid)) AS "size"
+  FROM pg_class C
+  LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+  WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+  ORDER BY pg_relation_size(C.oid) DESC
+  LIMIT 20;
+ ```
+ More: https://wiki.postgresql.org/wiki/Disk_Usage
+
 ### Activity
 
 ```sql
