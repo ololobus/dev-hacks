@@ -9,7 +9,7 @@ Open `info.plist` inside `.app` package and add
 <string>YES</string>
 ```
 
-### Hardware temps/fan speed for Mac OS X
+### Hardware temps/fan speed for macOS
 
 https://github.com/Chris911/iStats
 
