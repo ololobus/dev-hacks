@@ -40,7 +40,7 @@ SELECT nspname || '.' || relname AS "relation",
   ORDER BY pg_relation_size(C.oid) DESC
   LIMIT 10;
  ```
- More: https://wiki.postgresql.org/wiki/Disk_Usage
+ More: [https://wiki.postgresql.org/wiki/Disk_Usage](https://wiki.postgresql.org/wiki/Disk_Usage)
 
 ### Activity
 
@@ -64,7 +64,7 @@ WHERE relname !~ '^pg_' and relname <> 'active_locks';
 SELECT * FROM active_locks;
 ```
 
-More: http://blog.nordeus.com/dev-ops/postgresql-locking-revealed.htm
+More: [https://engineering.nordeus.com/postgres-locking-revealed/](https://engineering.nordeus.com/postgres-locking-revealed/)
 
 
 ### VACUUM
