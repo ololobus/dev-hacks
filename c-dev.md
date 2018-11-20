@@ -23,6 +23,7 @@ Select frame
 
 ```
 fr sel 4
+f 4
 ```
 
 ### Flamegraphs
