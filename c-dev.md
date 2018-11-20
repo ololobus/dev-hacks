@@ -10,6 +10,7 @@ Commands
 * `bt` – backtrace
 * `n` – next
 * `s` – step in
+* `c` – continue
 * `Enter` – previous command repeat
 
 Read core-dumps
