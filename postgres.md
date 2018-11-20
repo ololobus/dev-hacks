@@ -43,7 +43,7 @@ SELECT nspname || '.' || relname AS "relation",
  More: [https://wiki.postgresql.org/wiki/Disk_Usage](https://wiki.postgresql.org/wiki/Disk_Usage)
 
 ### Activity
-Shows associated processes (e.g., workers, walsennders, etc.)
+Shows associated processes with PIDs (e.g., workers, walsennders, etc.)
 ```sql
 SELECT * FROM pg_stat_activity;
 ```
