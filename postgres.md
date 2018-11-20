@@ -95,3 +95,10 @@ Export if necessary
 ```sql
 COPY large_test TO '/Users/username/Downloads/large_test.csv';
 ```
+
+Or write to file directly without creating a table
+```sql
+COPY (SELECT round(random()*10), random(), random()*142
+      FROM generate_series(1, 20000000) s(i))
+TO '/home/akondratov/large_test.csv';
+```
