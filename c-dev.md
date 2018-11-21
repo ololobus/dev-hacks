@@ -2,6 +2,12 @@
 
 ## Debugging
 
+### Compilation flags to enable debug
+
+```shell
+gcc -Og -g exec.c -o exec
+```
+
 ### LLDB
 
 Commands
