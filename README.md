@@ -1,5 +1,5 @@
-Dev hacks
-=========
+Developer hacks
+===============
 
 ### Content
   1. [*nix zone](nix-zone.md)
