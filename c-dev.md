@@ -5,8 +5,19 @@
 ### Compilation flags to enable debug
 
 ```shell
-gcc -Og -g exec.c -o exec
+gcc -O0 -g exec.c -o exec
 ```
+
+### Enable core dumps on Ubuntu
+```shell
+sudo sysctl -w kernel.core_pattern=core.%p
+```
+
+Next, set ulimit in the shell, where you run your program
+```shell
+ulimit -c unlimited
+```
+Core dumps will be side by side with executable.
 
 ### LLDB
 
