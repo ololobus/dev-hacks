@@ -1,5 +1,6 @@
 Developer hacks
 ===============
+Collection of developer hacks and tricks.
 
 ### Content
   1. [*nix zone](nix-zone.md)
