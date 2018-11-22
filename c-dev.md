@@ -35,6 +35,9 @@ Read core-dumps
 ```bash
 lldb --core /cores/core.30993
 ```
+```shell
+lldb /path/to/executable -c /path/to/core.2731
+```
 
 Select frame
 
