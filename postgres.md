@@ -1,6 +1,6 @@
 # PostgreSQL
 
-### Build/development scripts
+### Build / dev scripts
 https://github.com/ololobus/pg-scripts
 
 ### Count, preview and delete duplicates
