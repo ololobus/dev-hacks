@@ -2,7 +2,7 @@ Developer hacks
 ===============
 Collection of developer hacks and tricks.
 
-### Content
+## Content
   1. [*nix zone](nix-zone.md)
   2. [Git/SCM](git-scm.md)
   3. [Python](python.md)
