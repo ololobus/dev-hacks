@@ -3,6 +3,12 @@
 ### Build / dev scripts
 https://github.com/ololobus/pg-scripts
 
+Get PG_VERSION_NUM from human-readable version
+```shell
+$ echo "10.6" | sed 's/[A-Za-z].*$//' | tr '.' ' ' | awk '{printf "%d%04d\n", $1, $2}'
+100006
+```
+
 ### Count, preview and delete duplicates
 ```sql
 SELECT count(id)
