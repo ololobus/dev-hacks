@@ -27,3 +27,11 @@ git diff -c master > patch-name-v1.0.diff
 ```bash
 git apply -3 --stat patch-name-v1.0.patch
 ```
+
+### Subtree
+List directories previously added as subtries
+```shell
+git log | grep git-subtree-dir
+```
+
+More: https://www.atlassian.com/blog/git/alternatives-to-git-submodule-git-subtree
