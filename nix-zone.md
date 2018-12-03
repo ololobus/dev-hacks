@@ -1,5 +1,7 @@
 # *nix zone
 
+
+## Command line tools
 ### Generate random passwords from command line
 
 ```shell
@@ -68,11 +70,8 @@ watch -n N_SECONDS <your command>
 localedef -i en_US -f UTF-8 en_US.UTF-8
 ```
 
-### Wireshark
-Filter packets by data size and value 
-```python
-data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2})
-```
+
+## Network
 ### OpenVPN
 
 ```shell
@@ -84,3 +83,16 @@ login
 password
 ```
 and add `auth-user-pass /path/to/pass.txt` to `config.ovpn`.
+
+### Wireshark
+Filter packets by data size and value 
+```python
+data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2})
+```
+
+## Appearence
+### GNOME tweaks
+
+```shell
+sudo apt-get install gnome-tweak-tool
+```
