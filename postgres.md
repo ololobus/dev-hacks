@@ -111,3 +111,9 @@ COPY (SELECT round(random()*10), random(), random()*142
       FROM generate_series(1, 20000000) s(i))
 TO '/home/akondratov/large_test.csv';
 ```
+
+### Calculate md5 hash of the entire table
+Order explicitly by some column (e.g. primary key) to avoid different orderings
+```sql
+SELECT md5(CAST((array_agg(test_table.* order by order_column)) AS text)) from test_table;
+```
