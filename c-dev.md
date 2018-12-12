@@ -50,7 +50,8 @@ f 4
 
 [More info](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html#DTrace)
 
-Dtrace by pid
+#### dtrace
+By pid
 ```bash
 sudo dtrace -x ustackframes=100 -n 'profile-99 /pid == 21898  && arg1/ {@[ustack()] = count(); } tick-60s { exit(0); }' -o out.stacks
 ```
@@ -59,7 +60,7 @@ sudo dtrace -x ustackframes=100 -n 'profile-99 /pid == 21898  && arg1/ {@[ustack
 sudo dtrace -x ustackframes=100 -n 'profile-99 /execname == "postgres" && arg1/ {@[ustack()] = count(); } tick-60s { exit(0); }' -p 21800  -o out.stacks
 ```
 
-Dtrace by process name
+By process name
 ```
 sudo dtrace -x ustackframes=100 -n 'profile-99 /execname == "postgres" && arg1/ {@[ustack()] = count(); } tick-60s { exit(0); }' -o out.stacks
 ```
@@ -70,3 +71,18 @@ Create SVG
 ~/dev/FlameGraph/flamegraph.pl out.folded > out.svg
 ```
 
+#### perf
+By pid
+```shell
+sudo perf record -p 12345 -F 99 -g
+```
+
+```shell
+mv perf.data my_prog_perf.data
+```
+
+Create SVG
+```shell
+sudo perf script -i my_prog_perf.data | ~/dev/FlameGraph/stackcollapse-perf.pl > my_prog_perf_out.perf-folded
+~/dev/FlameGraph/flamegraph.pl my_prog_perf_out.perf-folded > my_prog_perf.svg
+```
