@@ -46,6 +46,8 @@ fr sel 4
 f 4
 ```
 
+## Profiling
+
 ### Flamegraphs
 
 [More info](http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html#DTrace)
