@@ -68,8 +68,10 @@ sudo dtrace -x ustackframes=100 -n 'profile-99 /execname == "postgres" && arg1/ 
 ```
 
 Create SVG
-```
+```shell
 ~/dev/FlameGraph/stackcollapse.pl out.stacks > out.folded
+```
+```shell
 ~/dev/FlameGraph/flamegraph.pl out.folded > out.svg
 ```
 
@@ -86,5 +88,7 @@ mv perf.data my_prog_perf.data
 Create SVG
 ```shell
 sudo perf script -i my_prog_perf.data | ~/dev/FlameGraph/stackcollapse-perf.pl > my_prog_perf_out.perf-folded
+```
+```shell
 ~/dev/FlameGraph/flamegraph.pl my_prog_perf_out.perf-folded > my_prog_perf.svg
 ```
