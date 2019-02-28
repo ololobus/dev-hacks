@@ -6,7 +6,7 @@ Collection of developer hacks and tricks.
   1. [*nix zone](nix-zone.md)
   2. [Git/SCM](git-scm.md)
   3. [Python](python.md)
-  4. [Ruby (and Rails, gem, bundler, etc)](ruby.md)
+  4. [Ruby (Rails, gem, bundler, etc.)](ruby.md)
   5. [DBA](dba.md)
   6. [macOS](macos.md)
   7. [C development](c-dev.md)
