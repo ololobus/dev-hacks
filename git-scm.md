@@ -1,18 +1,23 @@
 # Git/SCM
 
-### Rebase
+## Rebase
 
+### rerere
 `git rerere` -- https://git-scm.com/docs/git-rerere
 
+### Rebase last N commits
+`git rebase -i @~N`
 
-### Show stats since selected commit
 
+## Stats
+
+Show stats since selected commit
 ```
 git diff --stat ef01f745d9a6dd14fc9f9941ef8546d078b75ffe
 ```
 
 
-### Create and apply patch
+## Create and apply patch
 
 ```bash
 git format-patch master --stdout > patch-name-v1.0.patch
@@ -28,7 +33,7 @@ git diff -c master > patch-name-v1.0.diff
 git apply -3 --stat patch-name-v1.0.patch
 ```
 
-### Subtree
+## Subtree
 List directories previously added as subtries
 ```shell
 git log | grep git-subtree-dir
