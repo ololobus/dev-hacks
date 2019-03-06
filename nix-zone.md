@@ -39,6 +39,27 @@ Overall stats
 df -h
 ```
 
+### Create virtual disk with limited storage
+
+
+ 1. Create a file of the size you want (here 10MB)
+
+    `dd if=/dev/zero of=/home/username/test bs=1024 count=10000`
+
+ 2. Make a loopback device out of this file
+
+    `losetup -f /home/username/test`
+
+ 3. Format that device in the file system you want
+
+    `mkfs.ext4 /dev/loopXX`
+
+ 4. Mount it wherever you want (`/mnt/test` should exist)
+
+    `mount /dev/loopXX /mnt/test`
+
+Don't forget to unmount and clean up loop devices after use, with `losetup -D`.
+
 
 ### Find large files
 
