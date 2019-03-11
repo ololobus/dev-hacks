@@ -58,7 +58,7 @@ df -h
 
     `mount /dev/loopXX /mnt/test`
 
-Don't forget to unmount and clean up loop devices after use, with `losetup -D`.
+Don't forget to unmount and clean up loop device after use, with `sudo losetup -d /dev/loopXX`.
 
 
 ### Find large files
