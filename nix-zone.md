@@ -77,7 +77,7 @@ sudo du -k /* | awk '$1 > 500000' | sort -nr
 
 ### System stress/load tests
 ```shell
-sudo apt-get install sysbench
+sudo apt install sysbench
 sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
 ```
 
@@ -115,5 +115,5 @@ data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2}
 ### GNOME tweaks
 
 ```shell
-sudo apt-get install gnome-tweak-tool
+sudo apt install gnome-tweak-tool
 ```
