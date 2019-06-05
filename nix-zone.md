@@ -28,6 +28,12 @@ resume – `tmux a`
 detach – `Ctrl + b`, press `d`
 
 
+### Copy all stdin and stderr to file
+
+```shell
+python3 very-verbose-program.py 2>&1 | tee -a results.log
+```
+
 ### Disk usage
 Usage by directory
 ```shell
