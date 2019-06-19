@@ -2,6 +2,7 @@
 
 ## Commands
 
+ * go to the last line - `G`
  * delete all lines - `dG`
  * replace all substrings with empty - `:%s/phrase to delete//gc`
 
