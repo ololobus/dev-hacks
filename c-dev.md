@@ -51,7 +51,8 @@ Select frame
 Print binary or hex
 
 ```
-(lldb) p/t (uint32)((35184372088832) >> 32) & 0xffff                                                                                                                                                        (unsigned int) $0 = 0b00000000000000000010000000000000
+(lldb) p/t (uint32)((35184372088832) >> 32) & 0xffff
+(unsigned int) $0 = 0b00000000000000000010000000000000
 ```
 
 ```
