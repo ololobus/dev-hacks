@@ -28,6 +28,8 @@ Commands
 * `n` – next
 * `s` – step in
 * `c` – continue
+* `p` – print variable or expression
+* `expr` – evaluate and print expression
 * `Enter` – previous command repeat
 
 Read core-dumps
@@ -42,8 +44,28 @@ lldb /path/to/executable -c /path/to/core.2731
 Select frame
 
 ```
-fr sel 4
-f 4
+(lldb) fr sel 4
+(lldb) f 4
+```
+
+Print binary or hex
+
+```
+(lldb) p/t (uint32)((35184372088832) >> 32) & 0xffff                                                                                                                                                        (unsigned int) $0 = 0b00000000000000000010000000000000
+```
+
+```
+(lldb) p/x 100500
+(int) $2 = 0x00018894
+```
+
+Change signal handling rules (e.g. allow SIGINT pass)
+
+```
+(lldb) pro hand -p true SIGINT
+NAME         PASS   STOP   NOTIFY
+===========  =====  =====  ======
+SIGINT       true   true   true 
 ```
 
 ## Profiling
