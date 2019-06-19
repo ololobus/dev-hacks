@@ -1,7 +1,7 @@
 # PostgreSQL
 
 ### Build / dev scripts
-https://github.com/ololobus/pg-scripts
+[https://github.com/ololobus/pg-scripts](https://github.com/ololobus/pg-scripts)
 
 ### Get PG_VERSION_NUM from human-readable version
 ```shell
