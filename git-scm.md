@@ -28,6 +28,11 @@ git format-patch master --stdout > patch-name-v1.0.patch
 git diff -c master > patch-name-v1.0.diff
 ```
 
+Or add version and base commit
+```bash
+git format-patch -c -v7 --base=95bbe5d82e @~1
+```
+
 `-3` option for fall back on 3-way merge
 ```bash
 git apply -3 --stat patch-name-v1.0.patch
