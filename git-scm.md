@@ -17,6 +17,15 @@ git diff --stat ef01f745d9a6dd14fc9f9941ef8546d078b75ffe
 ```
 
 
+## Search
+
+### Check that specific commit is in the current branch
+
+```bash
+git branch --contains c7ae201c46 | grep $(git rev-parse --abbrev-ref @)
+```
+
+
 ## Create and apply patch
 
 ```bash
