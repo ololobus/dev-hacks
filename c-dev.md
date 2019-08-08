@@ -60,6 +60,12 @@ Print binary or hex
 (int) $2 = 0x00018894
 ```
 
+Print memory block by pointer
+
+```
+(lldb) memory read --size 1 --format x --count 256 pointer
+```
+
 Change signal handling rules (e.g. allow SIGINT pass)
 
 ```
