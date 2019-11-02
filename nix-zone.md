@@ -45,8 +45,21 @@ Overall stats
 df -h
 ```
 
-### Create virtual disk with limited storage
+### Find large files
 
+```shell
+sudo find / -size +500000 -print
+```
+```shell
+sudo find / -size +500000 -exec sudo ls -lah "{}" \;
+```
+
+### Find large directories
+```shell
+sudo du -k /* | awk '$1 > 500000' | sort -nr
+```
+
+### Create virtual disk with limited storage
 
  1. Create a file of the size you want (here 10MB)
 
@@ -65,21 +78,6 @@ df -h
     `mount /dev/loopXX /mnt/test`
 
 Don't forget to unmount and clean up loop device after use, with `sudo losetup -d /dev/loopXX`.
-
-
-### Find large files
-
-```shell
-sudo find / -size +500000 -print
-```
-```shell
-sudo find / -size +500000 -exec sudo ls -lah "{}" \;
-```
-
-### Find large directories
-```shell
-sudo du -k /* | awk '$1 > 500000' | sort -nr
-```
 
 ### System stress/load tests
 ```shell
