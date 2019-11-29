@@ -117,3 +117,13 @@ Order explicitly by some column (e.g. primary key) to avoid different orderings
 ```sql
 SELECT md5(CAST((array_agg(test_table.* order by order_column)) AS text)) from test_table;
 ```
+
+### Anonymous block of PL/pgSQL code
+
+For example throw some `notice` [message](https://www.postgresql.org/docs/12/plpgsql-errors-and-messages.html).
+```sql
+DO $$ 
+BEGIN 
+   RAISE NOTICE 'Some message';
+END $$;
+```
