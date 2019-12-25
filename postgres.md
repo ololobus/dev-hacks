@@ -61,7 +61,6 @@ SELECT * FROM pg_stat_activity;
 
 ```sql
 -- View with readable locks info and filtered out locks on system tables
-
 CREATE VIEW active_locks AS
 SELECT clock_timestamp(), pg_class.relname, pg_locks.locktype, pg_locks.database,
        pg_locks.relation, pg_locks.page, pg_locks.tuple, pg_locks.virtualtransaction,
