@@ -115,6 +115,13 @@ Filter packets by data size and value
 data.len > 1 or (data.len == 1 and data in {Q K Z I P X B E C S D H c d f F n 2})
 ```
 
+### Change default TTL value of IP network packages
+
+Maybe helpful to hack mobile hotspot limitations on some cellular data plans.
+
+ * Run `sudo sysctl -w net.inet.ip.ttl=65`
+ * Or make it persistent, put `net.inet.ip.ttl=65` into `/etc/sysctl.conf`
+
 ## Appearence
 ### GNOME tweaks
 
