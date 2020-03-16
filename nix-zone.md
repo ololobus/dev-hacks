@@ -45,6 +45,16 @@ Overall stats
 df -h
 ```
 
+### Find files and run some command per file
+
+```shell
+find postgres_data/base/ -regex '.*[0-9]+' -exec pg_filedump "{}" \; | grep Error | sort | uniq
+```
+
+```shell
+find postgres_data/base/ -regex '.*[0-9]+' -print0 | xargs -0 -n1 pg_filedump | grep Error | sort | uniq
+```
+
 ### Find large files
 
 ```shell
