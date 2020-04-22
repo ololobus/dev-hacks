@@ -39,3 +39,11 @@ To resolve this
 Unable to find Mach task port for process-id 83767: (os/kern) failure (0x5).
 ```
 issue you have to sign `gdb` executable. Refer to [this](https://stackoverflow.com/questions/11504377/gdb-fails-with-unable-to-find-mach-task-port-for-process-id-error) and [this](https://sourceware.org/gdb/wiki/PermissionsDarwin).
+
+### Core dumps on macOS
+
+Your current user may have no permissions on writing to `/cores` directory. So even with `ulimit -c unlimited` core dumps will not be generated. Set `777` on it:
+
+```sh
+sudo chmod 777 /cores
+```
