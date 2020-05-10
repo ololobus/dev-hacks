@@ -69,6 +69,15 @@ sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 sudo du -k /* | awk '$1 > 500000' | sort -nr
 ```
 
+### Create tmpfs partition
+
+```sh
+sudo mkdir /mnt/tmpfs
+sudo chmod -R 777 /mnt/tmpfs
+sudo mount -t tmpfs -o size=512m ext4 /mnt/tmpfs
+sudo umount /mnt/tmpfs
+```
+
 ### Create virtual disk with limited storage
 
  1. Create a file of the size you want (here 10MB)
