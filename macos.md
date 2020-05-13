@@ -53,7 +53,7 @@ sudo chmod 777 /cores
 What a luck macOS has a built-in VNC client! Just type:
 
 ```sh
-open open vnc://8.8.8.8:5901
+open vnc://8.8.8.8:5901
 ```
 
 Or use `ssh` to setup a secure tunnel first:
