@@ -55,19 +55,24 @@ find postgres_data/base/ -regex '.*[0-9]+' -exec pg_filedump "{}" \; | grep Erro
 find postgres_data/base/ -regex '.*[0-9]+' -print0 | xargs -0 -n1 pg_filedump | grep Error | sort | uniq
 ```
 
-### Find large files
+### Find large files and directories
+
+```shell
+du -hs * | sort -rh | head -5
+```
 
 ```shell
 sudo find / -size +500000 -print
 ```
+
 ```shell
 sudo find / -size +500000 -exec sudo ls -lah "{}" \;
 ```
 
-### Find large directories
 ```shell
 sudo du -k /* | awk '$1 > 500000' | sort -nr
 ```
+
 
 ### Create tmpfs partition
 
