@@ -119,6 +119,13 @@ watch -n N_SECONDS <your command>
 localedef -i en_US -f UTF-8 en_US.UTF-8
 ```
 
+### Show number of threads per process
+
+It also counts main process twice, so do -1 to the result.
+```shell
+ps -M 81581 | wc -l
+```
+
 
 ## Network
 ### OpenVPN
