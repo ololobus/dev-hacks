@@ -3,10 +3,29 @@
 ## Rebase
 
 ### rerere
+
 `git rerere` -- https://git-scm.com/docs/git-rerere
 
 ### Rebase last N commits
+
 `git rebase -i @~N`
+
+
+## Edit history
+
+### Add commit-message prefix to a range of commits
+
+```shell
+git filter-branch --msg-filter 'printf "FUNNY_LITTLE_PREFIX " && cat' sha_start..@
+```
+
+NB: `sha_start` is not included.
+
+### Add commit-message postfix to a range of commits
+
+```shell
+git filter-branch --msg-filter 'cat && printf "\n\nFUNNY_LITTLE_POSTFIX"' -f sha_start..@
+```
 
 
 ## Stats
