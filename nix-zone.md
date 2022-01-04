@@ -153,6 +153,17 @@ Maybe helpful to hack mobile hotspot limitations on some cellular data plans.
  * Run `sudo sysctl -w net.inet.ip.ttl=65`
  * Or make it persistent, put `net.inet.ip.ttl=65` into `/etc/sysctl.conf`
 
+### WiFi info
+
+```sh
+nmcli dev wifi
+```
+
+```sh
+sudo apt install wavemon
+wavemon
+```
+
 ## Appearence
 ### GNOME tweaks
 
