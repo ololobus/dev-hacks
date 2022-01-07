@@ -23,7 +23,8 @@ cd /etc/openvpn/easy-rsa
 openvpn --genkey --secret ta.key
 ```
 
-### Configure server (`/etc/openvpn/server.conf`)
+### Configure server
+Create `/etc/openvpn/server.conf`:
 ```config
 server 10.8.0.0 255.255.255.0
 proto tcp 
