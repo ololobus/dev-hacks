@@ -1,5 +1,9 @@
 # OpenVPN
 
+See also:
+- https://wiki.debian.org/OpenVPN#OpenVPN_Overview
+- https://www.howtoforge.com/how-to-install-and-configure-openvpn-server-on-debian-10/
+
 ## Server
 
 ### Generate all server keys and certs
