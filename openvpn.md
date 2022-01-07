@@ -71,7 +71,7 @@ apt-get install iptables-persistent
 /sbin/iptables-save > /etc/iptables/rules.v4
 ```
 
-### Enable IPv4 forwarding:
+### Enable IPv4 forwarding
 ```sh
 # uncomment in /etc/sysctl.conf
 net.ipv4.ip_forward=1
