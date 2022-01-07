@@ -47,6 +47,12 @@ verb 3
 # explicit-exit-notify 1 # isn't supported in tcp mode
 ```
 
+Start and enable service:
+```sh
+systemctl start openvpn@server
+systemctl enable openvpn@server
+```
+
 ### Enable VPN traffic routing
 
 ```sh
@@ -70,7 +76,6 @@ cd /etc/openvpn/easy-rsa
 ./easyrsa gen-req client nopass
 ./easyrsa sign-req client client
 
-cp pki/ca.crt /etc/openvpn/client/
 cp pki/issued/client.crt /etc/openvpn/client/
 cp pki/private/client.key /etc/openvpn/client/
 ```
