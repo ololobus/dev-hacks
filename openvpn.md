@@ -58,17 +58,27 @@ systemctl start openvpn@server
 systemctl enable openvpn@server
 ```
 
-### Enable VPN traffic routing
+### Enable iptables routing
 
 ```sh
 iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o enp1s0 -j MASQUERADE
 ```
 See also: https://openvpn.net/community-resources/how-to/#redirect
 
-Enable IPv4 forwarding:
+Make changes persistent (Debian):
+```sh
+apt-get install iptables-persistent
+/sbin/iptables-save > /etc/iptables/rules.v4
+```
+
+### Enable IPv4 forwarding:
 ```sh
 # uncomment in /etc/sysctl.conf
 net.ipv4.ip_forward=1
+```
+
+```sh
+sysctl -p
 ```
 
 ## Client
