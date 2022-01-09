@@ -90,9 +90,12 @@ cd /etc/openvpn/easy-rsa
 
 ./easyrsa gen-req client nopass
 ./easyrsa sign-req client client
+```
 
-cp pki/issued/client.crt /etc/openvpn/client/
-cp pki/private/client.key /etc/openvpn/client/
+### Revoke client certificate
+
+```sh
+./easyrsa revoke client
 ```
 
 ### Create client configuration
